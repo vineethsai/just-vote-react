@@ -23,6 +23,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage" : "http://vineethsai.github.io/just-vote-react",
   "browserslist": [
     ">0.2%",
     "not dead",
