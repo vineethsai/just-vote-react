@@ -214,7 +214,7 @@ class Post extends Component {
            <br />
            <Container fluid>
            <Row>
-                <Col className="col-sm-6 col-sm-offset-3">
+                <Col >
                     <Form inline>
                         <Input aria-label="Search" type="text" onChange={this.handleChange.bind(this)}/>
                         <Button  addonType="append" type="submit" className="btn btn-info"  onClick={this.handleClick.bind(this)}>
