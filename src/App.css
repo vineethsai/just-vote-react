@@ -5,7 +5,22 @@ img
 	height: 100px;
 	
 }
-
+footer p
+{
+	font-size: 15px;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	width:100%;
+	/* background:#999; */
+	text-align: right;
+	color: rgb(12, 10, 10);
+	font-size: 0.7em;
+	line-height: 70px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {

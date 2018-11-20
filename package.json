@@ -9,6 +9,8 @@
     "lodash": "^4.17.11",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-geosuggest": "^2.9.0",
+    "react-places-autocomplete": "^7.2.0",
     "react-scripts": "2.1.1",
     "react-table": "^6.8.6",
     "reactstrap": "^6.5.0",
@@ -18,16 +20,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage" : "http://vineethsai.github.io/just-vote-react",
+  "homepage": "http://vineethsai.github.io/just-vote-react",
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }

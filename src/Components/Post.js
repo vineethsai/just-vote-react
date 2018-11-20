@@ -1,12 +1,14 @@
+
 import React, { Component } from 'react';
 import {
-    InputGroup, Container,
+    Container,
     InputGroupAddon,
     Table, Button, Form,
     Input, Row, Col, InputGroupText
 } from 'reactstrap';
 import axios from 'axios';
-var _ = require('lodash');
+
+
 class Post extends Component {
 
   constructor(){
@@ -32,7 +34,6 @@ class Post extends Component {
         offices: this.state.offices,
         officers: this.state.officers,
         address: value
-        // .replace(/ /g,'')
     });
   }
 
@@ -48,7 +49,6 @@ class Post extends Component {
         }
     })
     .then(json => {
-        console.log(json);
         this.setState({
             officers: json["data"]["officials"],
             offices: json["data"]["offices"],
@@ -62,12 +62,10 @@ class Post extends Component {
         if(this.state.fed)
         {
             this.setState({fed: false});
-            console.log("fed false");
         }
         else
         {
             this.setState({fed: true});
-            console.log("fed true");
         }
     }
 
@@ -75,12 +73,10 @@ class Post extends Component {
         if(this.state.state)
         {
             this.setState({state: false});
-            console.log("statefalse");
         }
         else
         {
             this.setState({state: true});
-            console.log("state true");
         }
     }
 
@@ -88,12 +84,10 @@ class Post extends Component {
         if(this.state.county)
         {
             this.setState({county: false});
-            console.log("county false");
         }
         else
         {
             this.setState({county: true});
-            console.log("county true");
         }
     }
 
@@ -101,13 +95,10 @@ class Post extends Component {
         if(this.state.local)
         {
             this.setState({local: false});
-            // this.state.local = false;
-            console.log("local false");
         }
         else
         {
             this.setState({local: true});
-            console.log("local true");
         }
     }
 
@@ -120,24 +111,12 @@ class Post extends Component {
             let j = this.state.offices.indexOf(rows);
             return (typeof rows != undefined && this.state.offices[j]["divisionId"].match(searchLevel))
         }
-        // {
-        //     let j = this.state.officers.indexOf(rows);
-        //     if(j <= this.state.offices.length - 1)
-        //     {
-        //         // console.log(this.state.offices[j]['divisionId']);
-        //         return(this.state.offices[j]['divisionId'].match(searchLevel));
-        //     }}
         ).map(
             offices=>
         {
             
             let def_name = "unknown";
             i = this.state.offices.indexOf(offices);
-            console.log(offices, i);
-            // if(i < this.state.offices.length - 2)
-            // {
-            //     def_name = this.state.offices[i]['name'];
-            // }
           let dic = contest[i];
           let can = dic['name'];
           let pic;
@@ -172,13 +151,13 @@ class Post extends Component {
 
   render() {
 
-    var federal_pattern = "ocd-division/country:us";
-    var state_pattern = /ocd-division\/country:us\/state:(\D{2}$)/;
-    var cd_pattern = /ocd-division\/country:us\/state:(\D{2})\/cd:/;
-    var county_pattern = /ocd-division\/country:us\/state:\D{2}\/county:\D+/;
-    var local_pattern = /ocd-division\/country:us\/state:\D{2}\/place:\D+/;
-    // console.log(county);
-    var list;
+    let federal_pattern = "ocd-division/country:us";
+    let state_pattern = /ocd-division\/country:us\/state:(\D{2}$)/;
+    let cd_pattern = /ocd-division\/country:us\/state:(\D{2})\/cd:/;
+    let county_pattern = /ocd-division\/country:us\/state:\D{2}\/county:\D+/;
+    let local_pattern = /ocd-division\/country:us\/state:\D{2}\/place:\D+/;
+    let list;
+    let list2;
     if(this.state.fed)
     {
         list = this.renderResults(federal_pattern);
@@ -186,7 +165,7 @@ class Post extends Component {
     if(this.state.state)
     {
         list = this.renderResults(state_pattern);
-        list = this.renderResults(cd_pattern);
+        list2 = this.renderResults(cd_pattern);
     }
     if(this.state.county)
     {
@@ -201,7 +180,6 @@ class Post extends Component {
         list = this.renderResults("");
     }
     
-      console.log(this.state);
     return (
         < div className = "text-center" >
            <h1 >Just Vote</h1>
@@ -214,8 +192,8 @@ class Post extends Component {
            <br />
            <Container fluid>
            <Row>
-                <Col >
-                    <Form inline>
+                <Col sm="12" md={{ size: 6, offset: 3 }}>
+                    <Form >
                         <Input aria-label="Search" type="text" onChange={this.handleChange.bind(this)}/>
                         <Button  addonType="append" type="submit" className="btn btn-info"  onClick={this.handleClick.bind(this)}>
                         Submit</Button>
@@ -228,7 +206,8 @@ class Post extends Component {
                 <div className="px-5 text-center">
                 <h5 className="text-center">Show level of Government: </h5>
                 <br />
-                    <InputGroup>
+                {/* <Form inline > */}
+                {/* <div className=".col-sm-12 .col-md-6 .offset-md-3"> */}
                     <Row>
                         <Col>
                             <InputGroupAddon addonType="append">
@@ -263,8 +242,9 @@ class Post extends Component {
                             </InputGroupText>
                             </InputGroupAddon>
                         </Col>
-                    </Row>
-                    </InputGroup>
+                        </Row>
+                    {/* </div> */}
+                {/* </Form> */}
                 </div>
             </div>
            <br />
@@ -280,6 +260,7 @@ class Post extends Component {
           </tr>
            </thead>
            <tbody>
+           {list2}
            {list}
            </tbody>
            
