@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/just-vote-react/static/js/runtime~main.cbbbd4f9.js"
   },
   {
-    "revision": "f6f0e974484cfffc9772",
-    "url": "/just-vote-react/static/js/main.f6f0e974.chunk.js"
+    "revision": "3e3b617e1ad115e8c2b5",
+    "url": "/just-vote-react/static/js/main.3e3b617e.chunk.js"
   },
   {
     "revision": "89b523cda8e1dc187108",
     "url": "/just-vote-react/static/js/1.89b523cd.chunk.js"
   },
   {
-    "revision": "f6f0e974484cfffc9772",
+    "revision": "3e3b617e1ad115e8c2b5",
     "url": "/just-vote-react/static/css/main.fa449263.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/just-vote-react/static/css/1.8c5ac234.chunk.css"
   },
   {
-    "revision": "bcbabfb3f4454d28ee07a2fcb9156e09",
+    "revision": "cafeb25004617906c2a7f3e34642d8e6",
     "url": "/just-vote-react/index.html"
   }
 ];
