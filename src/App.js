@@ -8,7 +8,6 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
-<<<<<<< HEAD
   constructor() {
     super();
     this.state = {
@@ -59,9 +58,7 @@ class App extends Component {
     projects.splice(index, 1);
     this.setState({ projects: projects });
   }
-=======
 
->>>>>>> 9d7b38f71233a99d42f66375b2a74a4027895fc9
 
   render() {
     return (
