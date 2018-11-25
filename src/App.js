@@ -15,20 +15,16 @@ class App extends Component {
         <div className="App">
           <Header />
           <Switch>
-            <Route exact path="/home/" component={home} />
+            <Route  path="/home/" component={home} />
           </Switch>
           <Container className="py-3 bg-light px-0">
             <Row noGutters className="pt-2 pt-md-5 w-100 px-4 px-xl-0 position-relative">
               <Col>
                 <Switch>
-                  <Route exact path="/justvote/" component={Post} />
-                  <Route exact path="/justvolu/" component={Volunteer} />
-                  {/* <Route exact path="/home/" component={App} /> */}
+                  <Route  path="/justvote/" component={Post} />
+                  <Route  path="/justvolu/" component={Volunteer} />
                 </Switch>
               </Col>
-              {/* <Col>
-                <h1></h1>
-              </Col> */}
             </Row>
           </Container>
         </div>
