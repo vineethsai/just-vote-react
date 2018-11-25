@@ -1,10 +1,11 @@
-img
+a img 
 {
 	/* background-image: url('./img/blank-person.jpg'); */
     width: 100px;
 	height: 100px;
 	
 }
+
 footer p
 {
 	font-size: 15px;

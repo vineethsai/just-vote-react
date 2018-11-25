@@ -25,7 +25,7 @@ class Post extends Component {
       
     
   }
- 
+ //updates state
   handleChange = (event) => {    
     event.preventDefault();
     let value = event.target.value;
@@ -101,6 +101,7 @@ class Post extends Component {
         }
     }
 
+    //renders results
     renderResults(searchLevel)
     {
         let i = 0;
@@ -139,7 +140,7 @@ class Post extends Component {
           return (
               <tr aria-live="polite" key={this.state.offices.uniqueId}>
                   <td aria-live="polite" key={can.uniqueId} >{can}</td>
-                  <td aria-live="polite" key={pic.uniqueId} >{ <img  src={pic} alt="official" className="img-responsive" />}</td>
+                  <td aria-live="polite" key={pic.uniqueId} ><a href={pic}>{ <img  src={pic} alt="official" className="img-responsive" />}</a></td>
                   <td aria-live="polite" key={def_name.uniqueId} >{def_name}</td>
                   <td aria-live="polite" >{dic["party"]}</td>
                   <td aria-live="polite" key={undef.uniqueId}>{<a href={undef}>{undef}</a>}</td>
