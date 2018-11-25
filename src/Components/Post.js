@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
     Container,
@@ -36,7 +35,7 @@ class Post extends Component {
         address: value
     });
   }
-
+  //ajax request using axios and gapi
   handleClick = (event) => {    
     event.preventDefault();
     axios.get('https://www.googleapis.com/civicinfo/v2/representatives',
@@ -57,7 +56,7 @@ class Post extends Component {
         });
     });
   }
-
+  // gets the checkbox value
     getFedValue(event) {
         if(this.state.fed)
         {
@@ -151,7 +150,7 @@ class Post extends Component {
     }
 
   render() {
-
+    // for searching using toggle
     let federal_pattern = "ocd-division/country:us";
     let state_pattern = /ocd-division\/country:us\/state:(\D{2}$)/;
     let cd_pattern = /ocd-division\/country:us\/state:(\D{2})\/cd:/;
@@ -244,8 +243,6 @@ class Post extends Component {
                             </InputGroupAddon>
                         </Col>
                         </Row>
-                    {/* </div> */}
-                {/* </Form> */}
                 </div>
             </div>
            <br />
