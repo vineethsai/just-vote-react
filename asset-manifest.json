@@ -1,15 +1,15 @@
 {
-  "main.css": "/just-vote-react/static/css/main.6b62d5c8.chunk.css",
-  "main.js": "/just-vote-react/static/js/main.de371616.chunk.js",
-  "main.js.map": "/just-vote-react/static/js/main.de371616.chunk.js.map",
-  "static/css/1.58aebe38.chunk.css": "/just-vote-react/static/css/1.58aebe38.chunk.css",
-  "static/js/1.694621b5.chunk.js": "/just-vote-react/static/js/1.694621b5.chunk.js",
-  "static/js/1.694621b5.chunk.js.map": "/just-vote-react/static/js/1.694621b5.chunk.js.map",
-  "runtime~main.js": "/just-vote-react/static/js/runtime~main.cbbbd4f9.js",
-  "runtime~main.js.map": "/just-vote-react/static/js/runtime~main.cbbbd4f9.js.map",
-  "static/css/1.58aebe38.chunk.css.map": "/just-vote-react/static/css/1.58aebe38.chunk.css.map",
-  "static/css/main.6b62d5c8.chunk.css.map": "/just-vote-react/static/css/main.6b62d5c8.chunk.css.map",
-  "index.html": "/just-vote-react/index.html",
-  "precache-manifest.51ea5d7107fb9d7446111dce7754f2d6.js": "/just-vote-react/precache-manifest.51ea5d7107fb9d7446111dce7754f2d6.js",
-  "service-worker.js": "/just-vote-react/service-worker.js"
+  "main.css": "/just-vote-react/home/static/css/main.fa449263.chunk.css",
+  "main.js": "/just-vote-react/home/static/js/main.a2392ec9.chunk.js",
+  "main.js.map": "/just-vote-react/home/static/js/main.a2392ec9.chunk.js.map",
+  "static/css/1.8c5ac234.chunk.css": "/just-vote-react/home/static/css/1.8c5ac234.chunk.css",
+  "static/js/1.89b523cd.chunk.js": "/just-vote-react/home/static/js/1.89b523cd.chunk.js",
+  "static/js/1.89b523cd.chunk.js.map": "/just-vote-react/home/static/js/1.89b523cd.chunk.js.map",
+  "runtime~main.js": "/just-vote-react/home/static/js/runtime~main.a9371c8f.js",
+  "runtime~main.js.map": "/just-vote-react/home/static/js/runtime~main.a9371c8f.js.map",
+  "static/css/1.8c5ac234.chunk.css.map": "/just-vote-react/home/static/css/1.8c5ac234.chunk.css.map",
+  "static/css/main.fa449263.chunk.css.map": "/just-vote-react/home/static/css/main.fa449263.chunk.css.map",
+  "index.html": "/just-vote-react/home/index.html",
+  "precache-manifest.56b054ff2b0c4634f09eca6946182ceb.js": "/just-vote-react/home/precache-manifest.56b054ff2b0c4634f09eca6946182ceb.js",
+  "service-worker.js": "/just-vote-react/home/service-worker.js"
 }
