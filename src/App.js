@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uuid from 'uuid';
 import Header from './Components/Header';
 import { Container, Row, Col } from 'reactstrap';
 import Post from './Components/Post';
@@ -9,6 +8,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
+<<<<<<< HEAD
   constructor() {
     super();
     this.state = {
@@ -59,9 +59,11 @@ class App extends Component {
     projects.splice(index, 1);
     this.setState({ projects: projects });
   }
+=======
+
+>>>>>>> 9d7b38f71233a99d42f66375b2a74a4027895fc9
 
   render() {
-    console.log(this.state);
     return (
       <BrowserRouter>
         <div className="App">
