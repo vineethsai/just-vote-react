@@ -1,0 +1,92 @@
+.header-content {
+    background-color: #212125;
+}
+
+a {
+    color: #a3de83;
+}
+
+.header-content-inner h1, .header-content-inner p {
+    color: #a3de83;
+}
+
+.navbar-item {
+    transition-duration: 1s;
+}
+
+.navbar-item:hover {
+    font-size: 1.25em;
+    color: #239D60;
+}
+
+.icons {
+    display: none;
+}
+
+nav {
+    background-color: #212125;
+}
+
+strong, h2 {
+    color: #239D60;
+}
+
+footer {
+    background-color: #212125;
+}
+
+#mapid {
+    height: 15rem;
+}
+
+.btn-primary {
+    background-color: #f7f39a;
+    color: #212125;
+    outline-color: #f7f39a;
+}
+
+nav a, footer address, footer p, footer p a {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .icons {
+        height: 10em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .header-content-inner {
+        padding: 13rem;
+    }
+
+    #about-us {
+        background-image: url("img/about.jpg");
+        height: 30rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #about-us .header-content-inner {
+        padding: 2rem;
+    }
+
+    .navbar.toggler {
+        display: none;
+    }
+
+    #navbarSupportedContent1 {
+        display: initial;
+    }
+
+    #search-header {
+        background-image: url("img/search-header.jpg");
+        height: 30rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
