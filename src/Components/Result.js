@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, InputGroupAddon, Table, Button, Form, Input, Row, Col, InputGroupText } from 'reactstrap';
 
 class Result extends Component {
     render() {

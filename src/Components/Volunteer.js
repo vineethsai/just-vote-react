@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
 import { Container, Button, Form, Input, Row, Col } from 'reactstrap';
-import Result from './Components/Result';
+//import Result from './Components/Result';
+import * as d3 from "d3";
 
 class Volunteer extends Component {
     constructor() {
         super();
         this.state = {
+            allOps: '',
             results: '',
             searchTerm: '',
             displayOrder: true
         };
     }
 
-    loadData = () => {
+    componentDidMount() {
         d3.csv('https://data.bloomington.in.gov/datastore/dump/d4aa517d-3d2a-46f6-93b5-6d43345e9bf5?bom=True')
             .then((op) => {
-                this.setState({results: op});
+                this.setState(
+                    {results: op,
+                    allOps: op}
+                    );
             })
             .catch((err) => {
                 console.error(err);
@@ -32,9 +37,9 @@ class Volunteer extends Component {
         event.preventDefault();
         this.loadData();
         let searchResults = this.state.results.filter((opportunity) => {
-            if (opportunity.AgencyName.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
+            if (opportunity.AgencyName.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) >= 0) {
                 return true;
-            } else if (opportunity.WhatWeDo.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
+            } else if (opportunity.WhatWeDo.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) >= 0) {
                 return true;
             } else {
                 return false;
@@ -75,6 +80,7 @@ class Volunteer extends Component {
     }
 
     render() {
+        console.log(this.state.results);
         return(
             <div className='text-center'>
                 <h1>Just Volunteer</h1>
@@ -95,8 +101,24 @@ class Volunteer extends Component {
                     </Row>
                 </Container>
                 <br />
-                {this.state.results.map((opportunity) => {<Result opportunity={opportunity} />})}
+                {this.state.results.forEach((opportunity) => {return <Result opportunity={opportunity} />})}
             </div>
         )
     }
 }
+
+class Result extends Component {
+    render() {
+        return(
+            <div>
+                <h3>{this.props.opportunity.AgencyName}</h3>
+                <p>{this.props.opportunity.WhatWeDo}</p>
+                <address>{this.props.opportunity.Address}<br />
+                    <a href={this.props.opportunity.AgencyUrl}>Website</a>
+                </address>
+            </div>
+        )
+    }
+}
+
+export default Volunteer;
