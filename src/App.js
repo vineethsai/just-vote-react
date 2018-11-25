@@ -8,57 +8,6 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      officials: [],
-      offices: [],
-      address: []
-    }
-  }
-
-
-
-  getProjects() {
-    this.setState({
-      projects: [
-        {
-          id: uuid.v4(),
-          title: 'Business Website',
-          category: 'Web Deisgn'
-        },
-        {
-          id: uuid.v4(),
-          title: 'Social App',
-          category: 'Mobile Development'
-        },
-        {
-          id: uuid.v4(),
-          title: 'Ecommerce Shopping Cart',
-          category: 'Web Development'
-        }
-      ]
-    });
-  }
-
-  componentWillMount() {
-    this.getProjects();
-  }
-
-
-  handleAddProject(project) {
-    let projects = this.state.projects;
-    projects.push(project);
-    this.setState({ projects: projects });
-  }
-
-  handleDeleteProject(id) {
-    let projects = this.state.projects;
-    let index = projects.findIndex(x => x.id === id);
-    projects.splice(index, 1);
-    this.setState({ projects: projects });
-  }
-
 
   render() {
     return (
