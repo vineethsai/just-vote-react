@@ -115,6 +115,7 @@ class Post extends Component {
             offices=>
         {
             
+            
             let def_name = "unknown";
             i = this.state.offices.indexOf(offices);
           let dic = contest[i];
@@ -137,12 +138,12 @@ class Post extends Component {
           }
           def_name = offices['name'];
           return (
-              <tr>
-                  <td>{can}</td>
-                  <td>{ <img  src={pic} alt="sen" className="img-responsive" />}</td>
-                  <td>{def_name}</td>
-                  <td>{dic["party"]}</td>
-                  <td>{undef}</td>
+              <tr aria-live="polite" key={this.state.offices.uniqueId}>
+                  <td aria-live="polite" key={can.uniqueId} >{can}</td>
+                  <td aria-live="polite" key={pic.uniqueId} >{ <img  src={pic} alt="official" className="img-responsive" />}</td>
+                  <td aria-live="polite" key={def_name.uniqueId} >{def_name}</td>
+                  <td aria-live="polite" >{dic["party"]}</td>
+                  <td aria-live="polite" key={undef.uniqueId}>{<a href={undef}>{undef}</a>}</td>
               </tr>
           );
         }
@@ -193,7 +194,7 @@ class Post extends Component {
            <Container fluid>
            <Row>
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
-                    <Form >
+                    <Form role="search">
                         <Input aria-label="Search" type="text" onChange={this.handleChange.bind(this)}/>
                         <Button  addonType="append" type="submit" className="btn btn-info"  onClick={this.handleClick.bind(this)}>
                         Submit</Button>
@@ -213,7 +214,7 @@ class Post extends Component {
                             <InputGroupAddon addonType="append">
                             < InputGroupAddon addonType="append" >Federal</InputGroupAddon>
                             <InputGroupText>
-                                <Input addon onClick={this.getFedValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
+                                <Input role="button" aria-pressed="false" addon onClick={this.getFedValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
                             </InputGroupText>
                             </InputGroupAddon>
                             
@@ -222,7 +223,7 @@ class Post extends Component {
                             <InputGroupAddon addonType="append">
                             < InputGroupAddon  addonType="append">State</InputGroupAddon>
                             <InputGroupText>
-                                <Input addon onClick={this.getStateValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
+                                <Input role="button" aria-pressed="false" addon onClick={this.getStateValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
                             </InputGroupText>
                             </InputGroupAddon>
                         </Col>
@@ -230,7 +231,7 @@ class Post extends Component {
                             <InputGroupAddon addonType="append">
                             < InputGroupAddon  addonType="append">County</InputGroupAddon>
                             <InputGroupText>
-                                <Input addon onClick={this.getCountyValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
+                                <Input role="button" aria-pressed="false" addon onClick={this.getCountyValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
                             </InputGroupText>
                             </InputGroupAddon>
                         </Col>
@@ -238,7 +239,7 @@ class Post extends Component {
                             <InputGroupAddon addonType="append">
                             < InputGroupAddon  addonType="append">Local</InputGroupAddon>
                             <InputGroupText>
-                                <Input addon onClick={this.getLocalValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
+                                <Input role="button" aria-pressed="false" addon onClick={this.getLocalValue.bind(this)} type="checkbox" aria-label="Checkbox for following text input" />
                             </InputGroupText>
                             </InputGroupAddon>
                         </Col>
