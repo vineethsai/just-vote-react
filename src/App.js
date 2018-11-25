@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Components/Header';
 import { Container, Row, Col } from 'reactstrap';
-import Post from './Components/Post'
+import Post from './Components/Post';
+import Volunteer from './Components/Volunteer';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ class App extends Component {
           <Row noGutters className="pt-2 pt-md-5 w-100 px-4 px-xl-0 position-relative">
             <Col>
               <Post />
+              <Volunteer />
             </Col>
           </Row>
         </Container>
