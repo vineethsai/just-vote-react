@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLink,
  } from 'reactstrap';
+import { HashRouter, Link } from 'react-router-dom'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -27,15 +28,16 @@ export default class Header extends React.Component {
     return (
       <div>
         <Navbar  light expand="md">
-          <NavbarBrand href="/home/">Be Informed</NavbarBrand>
+          <Link to="/home/">Be Informed</Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <HashRouter  basename="/just-vote-react"/>
               <NavItem>
-                <NavLink href="/justvote/">Just Vote</NavLink>
+                <Link to="/justvote/">Just Vote</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/justvolu/">Just Volunteer</NavLink>
+                <Link to="/justvolu/">Just Volunteer</Link>
               </NavItem>
             </Nav>
           </Collapse>

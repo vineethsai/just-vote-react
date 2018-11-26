@@ -11,11 +11,11 @@ class App extends Component {
 
   render() {
     return (
-      <HashRouter basename="/just-vote-react">
+      <HashRouter>
         <div className="App">
           <Header />
           <Switch>
-            <Route  path="/home/" component={home} />
+            <Route path="/home/" component={home} />
           </Switch>
           <Container className="py-3 bg-light px-0">
             <Row noGutters className="pt-2 pt-md-5 w-100 px-4 px-xl-0 position-relative">
