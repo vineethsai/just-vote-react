@@ -3,7 +3,7 @@ import Header from './Components/Header';
 import { Container, Row, Col } from 'reactstrap';
 import Post from './Components/Post';
 import Volunteer from './Components/Volunteer';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 import home from './Components/home'
 import './App.css';
 
@@ -11,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter basename="/just-vote-react">
         <div className="App">
           <Header />
           <Switch>
@@ -21,14 +21,14 @@ class App extends Component {
             <Row noGutters className="pt-2 pt-md-5 w-100 px-4 px-xl-0 position-relative">
               <Col>
                 <Switch>
-                  <Route  path="/justvote/" component={Post} />
-                  <Route  path="/justvolu/" component={Volunteer} />
+                  <Route path="/justvote/" component={Post} />
+                  <Route path="/justvolu/" component={Volunteer} />
                 </Switch>
               </Col>
             </Row>
           </Container>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
