@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/just-vote-react/home/static/js/runtime~main.a9371c8f.js"
   },
   {
-    "revision": "73a3a7819c3d50411933",
-    "url": "/just-vote-react/home/static/js/main.73a3a781.chunk.js"
+    "revision": "a45d94ac10441e8c5b2c",
+    "url": "/just-vote-react/home/static/js/main.a45d94ac.chunk.js"
   },
   {
-    "revision": "f6bda7380bf1f4e33025",
-    "url": "/just-vote-react/home/static/js/1.f6bda738.chunk.js"
+    "revision": "5186e91552fb19cacc52",
+    "url": "/just-vote-react/home/static/js/1.5186e915.chunk.js"
   },
   {
-    "revision": "73a3a7819c3d50411933",
+    "revision": "a45d94ac10441e8c5b2c",
     "url": "/just-vote-react/home/static/css/main.2a81fc0b.chunk.css"
   },
   {
-    "revision": "f6bda7380bf1f4e33025",
+    "revision": "5186e91552fb19cacc52",
     "url": "/just-vote-react/home/static/css/1.eabe61d5.chunk.css"
   },
   {
-    "revision": "375ecf3aec0c43e72f7cf157525c2b55",
+    "revision": "9d428d62fc5dad198c4b119a83fc6ad2",
     "url": "/just-vote-react/home/index.html"
   }
 ];
