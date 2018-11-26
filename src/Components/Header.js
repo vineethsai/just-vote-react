@@ -32,7 +32,7 @@ export default class Header extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <HashRouter  basename="/just-vote-react"/>
+              <HashRouter  basename={process.env.PUBLIC_URL + '/'}/>
               <NavItem>
                 <Link to="/justvote/">Just Vote</Link>
               </NavItem>
