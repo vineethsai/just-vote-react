@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/just-vote-react/home/precache-manifest.27430ee4aaece36abeaeffcb89e43057.js"
+  "/just-vote-react/precache-manifest.fd38f229c9624c9877382c0a09de787a.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/just-vote-react/home/index.html", {
+workbox.routing.registerNavigationRoute("/just-vote-react/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
