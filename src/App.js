@@ -14,15 +14,13 @@ class App extends Component {
       <HashRouter basename={process.env.PUBLIC_URL+'/'}>
         <div className="App">
           <Header />
-          <Switch>
-            <Route path="/home/" component={home} />
-          </Switch>
           <Container className="py-3 bg-light px-0">
             <Row noGutters className="pt-2 pt-md-5 w-100 px-4 px-xl-0 position-relative">
               <Col>
                 <Switch>
-                  <Route path="/justvote/" component={Post} />
-                  <Route path="/justvolu/" component={Volunteer} />
+                  <Route exact path="/" component={home} />
+                  <Route path="/justvote" component={Post} />
+                  <Route path="/justvolu" component={Volunteer} />
                 </Switch>
               </Col>
             </Row>
